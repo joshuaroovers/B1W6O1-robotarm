@@ -1,0 +1,10 @@
+  robotArm.moveRight();
+  robotArm.moveLeft();
+
+  robotArm.drop()
+  robotArm.grab()
+
+  robotArm.scan()
+ 
+
+  

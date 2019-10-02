@@ -1,0 +1,41 @@
+<html>
+    <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="./robot-arm.js"></script>
+        <script>
+  var canvas = document.getElementById("canvas");
+  var robotArm = new RobotArm(canvas);
+
+  robotArm.loadLevel("exercise 13");
+
+  robotArm.randomLevel( 1, 8);
+  // Je eigen code plaats je hier.
+  therearecubes = true;
+  X = 1;
+  while(therearecubes)
+  {
+      robotArm.grab();
+      check = robotArm.scan();
+      if(check == "red" || check == "blue" || check == "green" || check == "white")
+      {
+          for(x = 0; x < X; x++)
+          {
+              robotArm.moveRight();
+          }
+          robotArm.drop();
+          for(y = 0; y < X; y++)
+          {
+              robotArm.moveLeft();
+          }
+          X++
+      }
+      else
+      {
+          therearecubes = false;
+      }
+  }
+  
+  robotArm.run();
+</script>
+    </body>
+</html>
