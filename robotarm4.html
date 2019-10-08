@@ -9,33 +9,35 @@
   robotArm.loadLevel("exercise 4");
 
   // Je eigen code plaats je hier.
-robotArm.grab();
-robotArm.moveRight();
-robotArm.moveRight();
-robotArm.moveRight();
-robotArm.drop();
-robotArm.moveLeft();
-robotArm.moveLeft();
-robotArm.moveLeft();
-robotArm.grab();
-robotArm.moveRight();
-robotArm.moveRight();
-robotArm.drop();
-robotArm.moveLeft();
-robotArm.moveLeft();
-robotArm.grab();
-robotArm.moveRight();
-robotArm.drop();
-robotArm.moveRight();
-robotArm.grab();
-robotArm.moveLeft();
-robotArm.drop();
-robotArm.moveRight();
-robotArm.moveRight();
-robotArm.grab();
-robotArm.moveLeft();
-robotArm.moveLeft();
-robotArm.drop();
+  var A = 0;
+  for(i = 0; i < 2; i++)
+  {
+    robotArm.grab();
+    robotArm.moveRight();
+    robotArm.moveRight();
+    robotArm.drop();
+    robotArm.moveLeft();
+    robotArm.moveLeft();
+  }
+    robotArm.grab();
+    robotArm.moveRight();
+    robotArm.drop();
+    robotArm.moveRight();
+    
+    for(x = 0; x < 2; x++)
+    {
+      robotArm.grab();
+      robotArm.moveLeft();
+      robotArm.drop();
+      while (A === 0){
+        robotArm.moveRight();
+        A = A + 1;
+      } 
+        
+    }
+    
+  
+    
   robotArm.run();
 </script>
     </body>

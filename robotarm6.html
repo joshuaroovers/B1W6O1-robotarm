@@ -13,7 +13,7 @@
   {
       robotArm.moveRight();
   }
-  for(x = 0; x < 8; x++)
+  for(x = 0; x < 7; x++)
   {
     robotArm.grab();
     robotArm.moveRight();
@@ -21,6 +21,10 @@
     robotArm.moveLeft();
     robotArm.moveLeft();
   }
+    robotArm.grab();
+    robotArm.moveRight();
+    robotArm.drop();
+    
   
   robotArm.run();
 </script>

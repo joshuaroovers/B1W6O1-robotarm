@@ -10,7 +10,7 @@
 
   // Je eigen code plaats je hier.
   robotArm.moveRight();
-  for(x = 0; x < 7; x++)
+  for(x = 0; x < 6; x++)
   {
       robotArm.grab();
       for(i = 0; i < 8; i++)
@@ -23,6 +23,12 @@
           robotArm.moveLeft();
       }
   }
+  robotArm.grab();
+      for(i = 0; i < 8; i++)
+      {
+          robotArm.moveRight();
+      }
+      robotArm.drop();
 
   robotArm.run();
 </script>

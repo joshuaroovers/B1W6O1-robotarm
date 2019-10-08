@@ -9,7 +9,7 @@
   robotArm.loadLevel("exercise 7");
 
   // Je eigen code plaats je hier.
-  for( x = 0; x < 5; x++)
+  for( x = 0; x < 4; x++)
 {
     for(i = 0; i < 6; i++)
     {
@@ -21,6 +21,13 @@
     robotArm.moveRight();
     robotArm.moveRight();
 }
+for(i = 0; i < 6; i++)
+    {
+        robotArm.moveRight();
+        robotArm.grab();
+        robotArm.moveLeft();
+        robotArm.drop();
+    }
   robotArm.run();
 </script>
     </body>
